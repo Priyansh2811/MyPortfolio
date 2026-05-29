@@ -29,7 +29,7 @@ Hello, I am **Priyanshu Nautiyal**, a Java Developer passionate about building s
 ## 📂 Project Structure
 
 ```
-portfolio-website/
+MyPortfolio/
 ├── assets/
 │   ├── img/
 │   ├── video/

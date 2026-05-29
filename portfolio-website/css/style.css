@@ -1,0 +1,1499 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;700&display=swap');
+
+/* --- RESET & GLOBAL STYLES --- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.section-title span{
+    color: rgb(255,77,0);
+}
+.cta{
+   display: inline-block;
+   padding: 10px 30px;
+   color: white;
+   background-color: transparent;
+   border: 2px solid rgb(0, 0, 0);
+   font-size: 2rem;
+   text-transform: uppercase;
+   letter-spacing: 0.1rem;
+   margin-top: 30px; 
+   transition: 0.3s ease;
+   transition-property: background-color, color;
+}
+.cta:hover{
+   color: rgb(255, 255, 255);
+   background-color: black;
+}
+.brand h1{
+   font-size: 3rem;
+   text-transform: uppercase;
+   color: white;
+}
+.brand h1 span{
+   color: black;
+}
+
+/* --- NAVIGATION BAR & HEADER --- */
+#header{
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: auto;
+}
+#header .header{
+   min-height: 8vh;
+   background-color: rgba(31, 30, 30, 0.24);
+   transition: .3s ease background-color;
+}
+#header .nav-bar{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   height: 100%;
+   max-width: 1300px;
+   padding: 0 20px;
+   margin: 0 auto;
+}
+#header .nav-list ul{
+   list-style: none;
+   position: absolute;
+   background-color: rgb(31, 30, 30);
+   width: 100vw;
+   height: 100vh;
+   left: 100%;
+   top: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+   overflow-x: hidden;
+   transition: .7s ease left;
+}
+#header .nav-list ul.active{
+   left: 0;
+}
+#header .nav-list ul a{
+   font-size: 2.5rem;
+   font-weight: 500;
+   letter-spacing: .2rem;
+   text-decoration: none;
+   color: white;
+   text-transform: uppercase;
+   padding: 20px;
+   display: block;
+}
+#header .nav-list ul a::after{
+   content: attr(data-after);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50% , -50%) scale(0);
+   color: rgba(240, 248, 255, 0.021);
+   font-size: 10rem;
+   letter-spacing: 50px;
+   z-index: -1;
+   transition: .3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after{
+   transform: translate(-50% , -50%) scale(1);
+   letter-spacing: initial;
+}
+
+/* --- HAMBURGER ICON CONFIG --- */
+#header .hamb{
+   height: 50px;
+   width: 50px;
+   border: 3px solid white;
+   border-radius: 50%;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 100;
+   cursor: pointer;
+   transform: scale(.8);
+}
+#header .hamb .bar{
+   height: 2px;
+   width: 25px;
+   position: relative;
+   background-color: white;
+   transition: 0.3s ease background-color;
+}
+#header .hamb::after{
+   position: absolute;
+   content: '';
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+   border: 3px solid white;
+   animation: hamb_puls 1s ease infinite;
+}
+#header .hamb .bar::after,
+#header .hamb .bar::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   background-color: white;
+   transition: .3s ease;
+   transition-property: top, bottom, transform;
+}
+#header .hamb .bar::after{
+   top: 8px;
+}
+#header .hamb .bar::before{
+   bottom: 8px;
+}
+
+/* Hamburger Active State (Transforming to 'X') */
+#header .hamb.active .bar{
+   background-color: transparent;
+}
+#header .hamb.active .bar::after{
+   top: 0;
+   transform: rotate(45deg);
+}
+#header .hamb.active .bar::before{
+   bottom: 0;
+   transform: rotate(-45deg);
+}
+
+/* ==========================================================================
+   HERO SECTION WITH BACKGROUND IMAGE AND NEON TEXT
+   ========================================================================== */
+
+/* ==========================================================================
+   PROFESSIONAL HERO SECTION WITH SOLID DESIGN & SMOOTH FADE
+   ========================================================================== */
+
+#one {
+    background-image: url(../assets/img/image3.png); /* Background photo maintained */
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Elite Matte Dark Overlay - Readability aur Premium contrast ke liye */
+#one::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(15, 17, 23, 0.9) 40%, rgba(15, 17, 23, 0.3) 100%);
+    z-index: 1;
+}
+
+#one .one {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text-container {
+    max-width: 650px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: #b3b9c1; /* Professional Slate Silver */
+    letter-spacing: 0.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 4.6rem;
+    font-weight: 700;
+    color: #ffffff; /* Crisp Solid White */
+    line-height: 1.3;
+    letter-spacing: 0.05rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    opacity: 0; /* Base state smooth entry ke liye */
+}
+
+/* Solid Professional Accents (No Gradients/Glows) */
+.name-accent {
+    color: #deaf53; /* Premium Matte Gold / Champagne Accent */
+    text-shadow: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+/* Corporate Minimalist Button Layout */
+.resume-widget {
+    margin-top: 35px;
+    width: fit-content;
+}
+
+.cta-professional {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(222, 175, 83, 0.4); /* Thin Gold Outline */
+    border-radius: 6px;
+    padding: 18px 25px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cta-professional:hover {
+    background: #deaf53; /* Button filling over with solid gold */
+    color: #0f1117; /* Dark text contrast on hover */
+    border-color: #deaf53;
+    transform: translateY(-2px);
+}
+
+.cta-professional:hover .widget-heading,
+.cta-professional:hover .widget-sub,
+.cta-professional:hover .icon-file {
+    color: #0f1117; /* Changing internal content colors seamlessly */
+}
+
+.widget-content {
+    display: flex;
+    align-items: center;
+}
+
+.icon-file {
+    font-size: 2.8rem;
+    margin-right: 15px;
+    color: #deaf53;
+    transition: color 0.3s ease;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.widget-sub {
+    font-size: 1.2rem;
+    color: #a0a5ad;
+    font-weight: 400;
+    margin-top: 3px;
+    transition: color 0.3s ease;
+}
+
+
+/* --- PRESTIGE SMOOTH SLIDE-FADE ANIMATION --- */
+.slide-fade {
+    animation: smoothSlideIn 1s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+}
+
+/* Sequential elegant delays for lines */
+#one .hero-title:nth-child(2) { animation-delay: 0.2s; }
+#one .hero-title:nth-child(3) { animation-delay: 0.4s; }
+#one .hero-title:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes smoothSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px); /* Halki si left-to-right smooth entry */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustment for Mobile screens */
+@media only screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 3.4rem;
+    }
+    #one::before {
+        background: rgba(15, 17, 23, 0.85);
+    }
+}
+/* --- SKILLS SECTION --- */
+/* ==========================================================================
+   SKILLS SECTION (UPDATED TO SKILLS SCROLLER)
+   ========================================================================== */
+
+#skills .skills {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#skills .service-top p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- CONTINUOUS SKILLS MARQUEE WRAPPER --- */
+#skills .skills-scroller {
+    overflow: hidden;
+    padding: 40px 0;
+    background-color: rgba(31, 30, 30, 0.05); /* Light gray lane contrast ke liye */
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto 0 auto; /* Aapke original margin-top: 50px se match kiya hai */
+    border-radius: 10px;
+    display: flex;
+}
+
+/* Edges par smooth blending gradient shadow effect */
+#skills .skills-scroller::before,
+#skills .skills-scroller::after {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+#skills .skills-scroller::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+#skills .skills-scroller::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+
+/* Moving lane wrapper */
+#skills .skills-slide {
+    display: flex;
+    align-items: center;
+    animation: infinite_scroll 18s linear infinite; /* 18 seconds smoothly moving right to left */
+}
+
+/* Hover karne par scroller ko pause karne ke liye (Optional but recommended) */
+#skills .skills-scroller:hover .skills-slide {
+    animation-play-state: paused;
+}
+
+/* --- INDIVIDUAL SKILL CARD --- */
+#skills .skill-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #29323c; /* Aapkecolor scheme se match kiya gaya dark theme */
+    padding: 15px 35px;
+    margin: 0 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#skills .skill-box:hover {
+    transform: translateY(-3px); /* Hover par halka sa upar uthega */
+}
+
+/* Skill Logo Image Adjustment */
+#skills .skill-box img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+/* Skill Text Style */
+#skills .skill-box span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white; /* Text perfectly visible on dark boxes */
+    letter-spacing: 0.1rem;
+}
+
+/* --- INFINITE TRANSLATION KEYFRAME --- */
+@keyframes infinite_scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* --- PREMIUM EXECUTIVE PROJECT CARD ARCHITECTURE --- */
+.premium-project-card {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(145deg, #13161f, #1b1e2a); /* Dual tonal depth background */
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px; /* Smooth rounded premium corners */
+    overflow: hidden;
+    margin: 50px 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease;
+}
+
+.premium-project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(222, 175, 83, 0.25); /* Subtle gold boundary glow on total card hover */
+}
+
+/* Left Content Pane Layout */
+.proj-content-pane {
+    flex: 1.1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.proj-badge-row {
+    margin-bottom: 12px;
+}
+
+.featured-tag {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #deaf53; /* Portfolio Gold Theme */
+    letter-spacing: 0.15rem;
+    background: rgba(222, 175, 83, 0.08);
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.proj-main-title {
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.05rem;
+    margin: 0;
+}
+
+.proj-sub-tagline {
+    font-size: 1.4rem;
+    color: #718096;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Tech Stack Luxury Chips */
+.tech-chips-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tech-chip {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    padding: 6px 14px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 6px;
+    letter-spacing: 0.05rem;
+    transition: background 0.3s ease;
+}
+
+.premium-project-card:hover .tech-chip {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.proj-detailed-body {
+    font-size: 1.45rem !important;
+    color: #94a3b8 !important; /* Extremely soothing readable code slate text */
+    line-height: 1.85;
+    margin-bottom: 35px;
+}
+
+/* Luxury Interactive CTA Trigger Buttons Buttons */
+.proj-cta-group {
+    display: flex;
+    gap: 15px;
+}
+
+.action-btn {
+    padding: 12px 28px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    letter-spacing: 0.02rem;
+}
+
+/* Solid Fill Gold Button for Live Demo */
+.cta-live-demo {
+    background-color: #deaf53;
+    color: #0f1117;
+    box-shadow: 0 4px 15px rgba(222, 175, 83, 0.2);
+}
+
+.cta-live-demo:hover {
+    background-color: #f1c265;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(222, 175, 83, 0.35);
+}
+
+/* Outline Ghost Button for Github Code */
+.cta-github-repo {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.cta-github-repo:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Right Media Pane Sizing Elements */
+.proj-media-pane {
+    flex: 0.9;
+    padding: 30px; /* Gives structural spacing breathing room around the video box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.video-frame-glow-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.premium-embedded-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 380px;
+}
+
+/* Decorative Live Pulse Component over video layout */
+.media-live-pulse-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(15, 17, 23, 0.75);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981; /* Premium Emerald Running Color Indicator */
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #10b981;
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Responsive UI Engine */
+@media (max-width: 992px) {
+    .premium-project-card {
+        flex-direction: column;
+    }
+    .proj-content-pane {
+        padding: 40px 30px;
+    }
+    .proj-media-pane {
+        padding: 0 30px 30px 30px;
+    }
+    .premium-embedded-video {
+        min-height: 280px;
+    }
+}
+
+/* --- ABOUT ME SECTION --- */
+#about .about{
+   flex-direction: column-reverse;
+   text-align: center;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 100px 20px;
+}
+#about .col-left{
+   width: 250px;
+   height: 360px;
+   margin: 0 auto;
+}
+#about .col-right{
+   width: 100%;
+}
+#about .col-right h2{
+   font-size: 1.8rem;
+   font-weight: 500;
+   letter-spacing: 1.2rem;
+   margin-bottom: 10px;
+}
+#about .col-right p{
+   margin-bottom: 20px;
+} 
+#about .col-right .cta{
+   color: red;
+   margin-bottom: 50px;
+   padding: 10px 20px;
+   font-size: 2rem;
+}
+#about .col-left .about-img{
+   height: 100%;
+   width: 100%;
+   position: relative;
+   border: 5px solid rgb(253, 141, 141);
+}
+#about .col-left .about-img::after{
+   content: '';
+   position: absolute;
+   left: -33px;
+   top: 19px;
+   height: 98%;
+   width: 98%;
+   border: 7px solid rgb(255, 0, 0);
+   z-index: -1;
+}
+
+
+/* --- KEYFRAMES / ANIMATIONS --- */
+@keyframes hamb_puls {
+   0%{
+      opacity: 1;
+      transform: scale(1);
+   }
+   100%{
+      opacity: 0;
+      transform: scale(1.4);
+   }
+}
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal {
+    100%{
+        color: black;
+    }
+}
+
+/* --- MEDIA QUERY FOR TABLETS (768px+) --- */
+@media only screen and (min-width: 768px) {
+   .cta {
+      font-size: 2.5rem;
+      padding: 20px 60px;
+   }
+   h1.section-title {
+      font-size: 6rem;
+   }
+   #one h1 {
+      font-size: 7rem;
+   }
+   #services .service-bottom .service-item {
+      flex-basis: 45%;
+      margin: 2.5%;
+   }
+   
+   #about .about {
+      flex-direction: row;
+   }
+   #about .col-left {
+      width: 600px;
+      height: 400px;
+      padding-left: 60px;
+      margin: 0;
+   }
+   #about .about .col-left .about-img::after {
+      left: -45px;
+      top: 34px;
+      height: 98%;
+      width: 98%;
+      border: 10px solid crimson;
+   }
+   #about .col-right {
+      text-align: left;
+      padding: 30px;
+   }
+   #about .col-right h1 {
+      text-align: left;
+   }
+   
+   
+   
+}
+
+/* --- MEDIA QUERY FOR DESKTOPS (1200px+) --- */
+@media only screen and (min-width: 1200px) {
+   #header .hamb{
+      display: none;
+   }
+   #header .nav-list ul{
+      position: initial;
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      width: fit-content;
+      background: transparent;
+   }
+   #header .nav-list ul li{
+      display: inline-block;
+   }
+   #header .nav-list ul li a{
+      font-size: 1.8rem;
+      padding: 10px 20px;
+   }
+   #header .nav-list ul a::after{
+      display: none;
+   }
+   #services .service-bottom .service-item {
+      flex-basis: 22%;
+      margin: 1.5%;
+   }
+}
+
+/* ==========================================================================
+   FORM SECTION STRUCTURAL DESIGN
+   ========================================================================== */
+#contact-form-section {
+    background-color: #0f1117; /* Slate Matte Black to maintain consistency */
+    padding: 100px 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.form-header {
+    margin-bottom: 40px;
+}
+
+.form-header p {
+    color: #8a8f98 !important;
+    font-size: 1.4rem !important;
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 15px auto 0 auto;
+}
+
+/* Input Fields Formatting */
+#submit-to-google-sheet {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+/* --- INPUT BOXES KE BEECH GAP THIK KARNE KE LIYE --- */
+.input-group {
+    width: 100%;
+    margin-bottom: 20px; /* Isse har ek box ke neeche 20px ka gap (space) ban jayega */
+}
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #deaf53; /* Changes to elegant Gold on click */
+}
+
+/* Form Submit Button Button */
+.form-submit-btn {
+    background: transparent;
+    border: 1px solid #deaf53;
+    color: #deaf53;
+    padding: 15px 35px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+    margin: 10px auto 0 auto;
+    transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: #deaf53;
+    color: #0f1117;
+    transform: translateY(-2px);
+}
+
+/* Status message style */
+#form-status-msg {
+    color: #deaf53;
+    display: block;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   PREMIUM MONOCHROME BLACK FOOTER ARCHITECTURE
+   ========================================================================== */
+
+#main-footer {
+    background-color: #0c0e12; /* Rich Deep Matte Black Base */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 80px 0 20px 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px; /* Layout crash control grid */
+}
+
+/* --- COLUMN 1: BRAND CONFIG --- */
+.footer-logo {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.footer-logo span:first-child {
+    color: #ffffff;
+}
+.footer-logo span:last-child {
+    color: #deaf53; /* Champagne Gold matching standard hero section accent */
+}
+.footer-tagline {
+    font-size: 1.3rem;
+    color: #deaf53;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.footer-bio {
+    font-size: 1.3rem !important;
+    color: #8a8f98 !important;
+    line-height: 1.8 !important;
+    font-weight: 400;
+}
+
+/* --- COLUMN 2: CONTACT CONFIG --- */
+.footer-col h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    position: relative;
+    width: fit-content;
+}
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 35px;
+    height: 2px;
+    background-color: #deaf53;
+}
+.contact-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-links li {
+    display: flex;
+    align-items: center;
+}
+.contact-links li i {
+    font-size: 1.8rem;
+    color: #deaf53;
+    width: 35px;
+    margin-top: 2px;
+}
+.meta-text {
+    display: flex;
+    flex-direction: column;
+}
+.meta-text .label {
+    font-size: 1.1rem;
+    color: #626873;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+.meta-text a, .meta-text .val {
+    font-size: 1.4rem;
+    color: #ccd2db;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.meta-text a:hover {
+    color: #ffffff;
+}
+
+/* --- COLUMN 3: NETWORKING / SOCIALS --- */
+/* --- PREMIUM SOCIAL BRAND HOVER COLOR ACCENTS --- */
+.social-logos a:hover {
+    transform: translateY(-3px);
+    color: #0c0e12; /* Dark background font visibility contrast text */
+}
+
+/* LinkedIn Hover - Corporate Blue */
+.social-logos .ico-in:hover { 
+    background-color: #0077b5; 
+    border-color: #0077b5; 
+    color: #ffffff;
+}
+
+/* X (Twitter) Hover - Minimalist White / Light Gray */
+.social-logos .ico-x:hover { 
+    background-color: #ffffff; 
+    border-color: #ffffff; 
+    color: #0c0e12;
+}
+
+/* GitHub Hover - Clean Solid White */
+.social-logos .ico-git:hover { 
+    background-color: #ffffff; 
+    border-color: #ffffff; 
+    color: #0c0e12;
+}
+
+/* Codolio Hover - Tech Cyan Orange Blend */
+.social-logos .ico-code:hover { 
+    background-color: #ff4d00; /* Codolio branding palette matching section title spans */
+    border-color: #ff4d00; 
+    color: #ffffff;
+}
+/* --- BOTTOM DIVISION PARTITION --- */
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+.footer-bottom p {
+    font-size: 1.2rem !important;
+    color: #535861 !important;
+    letter-spacing: 0.05rem;
+}
+
+/* --- RESPONSIVE STRUCTURAL OVERRIDES --- */
+@media only screen and (max-width: 768px) {
+    #main-footer {
+        padding: 60px 0 20px 0;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 35px;
+        padding: 0 30px;
+    }
+    .footer-bottom {
+        margin-top: 40px;
+    }
+}
+/* --- CONNECT WITH ME SECTION TEXT VISIBILITY FIX --- */
+.social-channels .social-text {
+    font-size: 1.4rem !important;
+    color: #e2e8f0 !important; /* Premium Crisp Off-White for high readability */
+    line-height: 1.8;
+    margin-bottom: 25px;
+    display: block;
+}
+
+/* --- SOCIAL LOGOS TRACK HOVER ARCHITECTURE --- */
+.social-logos {
+    display: flex !important;
+    gap: 15px !important;
+    align-items: center !important;
+    margin-top: 15px;
+}
+
+.social-logos a {
+    height: 46px !important;    /* Size thoda bada kiya h visually popping look ke liye */
+    width: 46px !important;
+    background-color: rgba(255, 255, 255, 0.05) !important; /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;  /* Defined explicit border */
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Icons Size and Color Setup */
+.social-logos a i {
+    color: #ffffff !important;   /* Solid White Font for standard icons */
+    font-size: 2rem !important;  /* Icons ka size yahan se bada hoga */
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+/* --- CODOLIO INLINE SVG IMAGE CONTROLS --- */
+.codolio-svg-icon {
+    height: 22px !important;     /* Custom height matching FontAwesome standard ratios */
+    width: 22px !important;
+    object-fit: contain;
+    filter: invert(1) brightness(2); /* Agar aapka SVG black color ka h, toh ye line use automatic transparent white kar degi */
+    transition: filter 0.3s ease;
+}
+
+/* --- HOVER ACCENTS REFINED --- */
+.social-logos a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.social-logos .ico-in:hover { background-color: #0077b5 !important; border-color: #0077b5 !important; }
+.social-logos .ico-x:hover { background-color: #ffffff !important; border-color: #ffffff !important; }
+.social-logos .ico-git:hover { background-color: #333333 !important; border-color: #444444 !important; }
+
+/* Codolio branding background matching orange text theme */
+.social-logos .ico-code:hover { 
+    background-color: #ff4d00 !important; 
+    border-color: #ff4d00 !important; 
+}
+/* Hover par Codolio SVG color back to black for better contrast on orange background */
+.social-logos .ico-code:hover .codolio-svg-icon {
+    filter: invert(0) brightness(0);
+}
+
+/* X aur GitHub hover par unke icon lines ko dark gray karne ke liye */
+.social-logos .ico-x:hover i,
+.social-logos .ico-git:hover i {
+    color: #0c0e12 !important;
+}
+
+/* --- X CUSTOM INLINE SVG LOGO CONTROLS --- */
+.x-svg-icon {
+    height: 18px !important;
+    width: 18px !important;
+    fill: #ffffff; /* Default standard white color */
+    transition: fill 0.3s ease;
+}
+
+/* Hover karne par X logo ka color dark gray hoga custom white background pr */
+.social-logos .ico-x:hover .x-svg-icon {
+    fill: #0c0e12 !important;
+}
+
+/* ==========================================================================
+   EXECUTIVE DESKTOP DASHBOARD PATTERN - NO IFRAME GLITCH
+   ========================================================================== */
+.problem-solving-section {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.problem-solving-title {
+    font-size: 4.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0.2rem;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.problem-solving-title .orange-accent {
+    font-weight: 500;
+    color: #ff5722;
+    margin-left: 10px;
+}
+
+/* ==========================================================================
+   UPDATED CODOLIO BOX SIZING: NARROW WIDTH & EXPANDED HEIGHT
+   ========================================================================== */
+
+.codolio-premium-container-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(145deg, #11141c, #161922);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 40px;
+    gap: 40px;
+    
+    /* 🚨 SIDES SE SHORTER: Width ko pure section ka 85% kar diya aur center align kiya */
+    width: 85% !important; 
+    margin: 0 auto !important; /* Box ko screen ke center mein rakhne ke liye */
+    
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+/* Right Display Section jahan card/screenshot embed hai */
+.codolio-right-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    flex: 1.3; 
+    width: 100%;
+}
+
+/* 🚨 HEIGHT EXPANSION ENGINE: Screenshot/Iframe Box ki sizing details */
+.codolio-large-iframe-box {
+    width: 100%;
+    
+    /* 🚨 HEIGHT BADHA DIYA: Pehle se height badha kar 210px kar di gayi hai */
+    height: 210px !important; 
+    
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Agar aap screenshot image use kar rahe hain, toh isko bhi full height stretch milega */
+.codolio-img-fluid {
+    width: 100%;
+    
+    /* 🚨 IMAGE HEIGHT EXTENSION */
+    height: 100% !important; 
+    max-height: 210px !important; 
+    
+    object-fit: cover; /* Dashboard bina stretch ya distort hue bade space me fit hoga */
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Responsive fallback update */
+@media (max-width: 992px) {
+    .codolio-premium-container-box {
+        width: 100% !important; /* Mobile layouts par screen ke hisab se responsive stretch hoga */
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    .codolio-large-iframe-box {
+        height: 180px !important;
+    }
+}
+
+.codolio-left-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 0.8;
+    text-align: left;
+}
+
+.codolio-icon-wrapper {
+    background: rgba(255, 87, 34, 0.05);
+    border: 1px solid rgba(255, 87, 34, 0.15);
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.codolio-icon-wrapper i {
+    font-size: 2.2rem;
+    color: #ff5722;
+}
+
+.strip-badge {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ff5722;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.codolio-strip-text h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+}
+
+.codolio-strip-text p {
+    font-size: 1.4rem !important;
+    color: #94a3b8 !important;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Right Panel Viewport - Massive Desktop Look Distribution */
+.codolio-right-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    flex: 1.5; /* Large widescreen sizing ratio */
+    width: 100%;
+}
+
+.codolio-dashboard-link {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+/* Image Container Engine with 16:9 Aspect Ratio Simulation */
+.codolio-screenshot-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #0c0e12;
+}
+
+.codolio-img-fluid {
+    width: 100%;
+    height: auto;
+    max-height: 240px; /* Expands height comfortably without ruining image properties */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Elegant dark overlay on image hover */
+.dashboard-interactive-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 17, 23, 0.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    z-index: 5;
+}
+
+.dashboard-interactive-overlay span {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background: #ff5722;
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* Hover Macro Micro-interactions */
+.codolio-dashboard-link:hover .codolio-img-fluid {
+    transform: scale(1.04);
+}
+
+.codolio-dashboard-link:hover .dashboard-interactive-overlay {
+    background: rgba(15, 17, 23, 0.65); /* darkens background image layout to reveal text clearly */
+}
+
+.codolio-dashboard-link:hover .dashboard-interactive-overlay span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.codolio-strip-btn {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #ff5722;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.codolio-strip-btn:hover {
+    color: #ff784e;
+}
+
+/* Tablet Fallbacks */
+@media (max-width: 992px) {
+    .codolio-premium-container-box {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    .codolio-left-details, .codolio-right-display {
+        width: 100%;
+    }
+    .codolio-right-display {
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================================================
+   EXACT REPLICA TYPOGRAPHY SYSTEM (ABOUT ME MATCH - SLIM STROKE)
+   ========================================================================== */
+
+/* 1. Projects Heading Format */
+.main-section-projects-title {
+    font-size: 4.5rem !important; /* Large structural scale matching image_74a787.png */
+    font-weight: 300 !important;  /* 🚨 THIN STROKE: Font ko mota hone se rokega, ekdum elegant line dega */
+    color: #000000 !important;    /* Jet Black color for 'MY' */
+    letter-spacing: 0.25rem !important; /* Wide technical spacing between characters */
+    text-transform: uppercase !important;
+    font-family: 'Montserrat', sans-serif !important;
+    margin-top: 30px !important;
+    margin-bottom: 45px !important;
+    text-align: center;
+}
+
+.main-section-projects-title .orange-project-accent {
+    font-weight: 300 !important;  /* Keep it thin to maintain harmony */
+    color: #ff5722 !important;    /* Dynamic matching profile orange */
+    margin-left: 14px !important; /* Gap spacer between words */
+}
+
+
+/* 2. Problem Solving Heading Format */
+.problem-solving-section .problem-solving-title {
+    font-size: 4.5rem !important; 
+    font-weight: 300 !important;  /* 🚨 THIN STROKE: Exact clone weight for 'PROBLEM' */
+    color: #000000 !important;    
+    letter-spacing: 0.25rem !important;
+    text-transform: uppercase !important;
+    font-family: 'Montserrat', sans-serif !important;
+    margin-bottom: 35px !important;
+    text-align: center;
+}
+
+.problem-solving-section .problem-solving-title .orange-accent {
+    font-weight: 300 !important;  
+    color: #ff5722 !important;    /* Dynamic matching profile orange for 'SOLVING' */
+    margin-left: 14px !important;
+}

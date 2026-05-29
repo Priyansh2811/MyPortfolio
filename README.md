@@ -74,7 +74,7 @@ MyPortfolio/
 Clone the repository:
 
 ```
-git clone https://github.com/USERNAME/portfolio-website.git
+git clone https://github.com/priyansh2811/MyPortfolio.git
 ```
 
 Open the project:

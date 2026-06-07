@@ -1497,3 +1497,629 @@ img{
     color: #ff5722 !important;    /* Dynamic matching profile orange for 'SOLVING' */
     margin-left: 14px !important;
 }
+
+/* ==========================================================================
+   AMELIA STYLE: LEFT SIDE HERO TYPOGRAPHY & INTERACTION ENGINE
+   ========================================================================== */
+
+.hero-text-content-cyan {
+    text-align: left;
+    max-width: 580px; /* Text ko screen par zyada phailne se rokega */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins', 'Montserrat', sans-serif !important;
+}
+
+/* Line 1: Hi, It's Priyanshu */
+.cyan-greeting-title {
+    font-size: 3.8rem !important; /* Professional standard size */
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.2 !important;
+    margin-bottom: 8px !important;
+    text-transform: none !important; /* ALL CAPS look ko khatam kiya */
+}
+
+/* Amelia Style Cyan Accent Color */
+.cyan-neon-text {
+    color: #00f2fe !important; 
+}
+
+/* Line 2: I'm a [Typed Text Area] */
+.cyan-role-sub {
+    font-size: 2.4rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin-bottom: 22px !important;
+    text-transform: none !important;
+}
+
+/* Dynamic JS Text Color */
+#typed-skills-engine {
+    color: #00f2fe !important;
+    font-weight: 600;
+}
+
+/* Typed.js Cursor Blinking Animation (Terminal Style) */
+.typed-cursor {
+    color: #00f2fe !important;
+    font-size: 2.4rem;
+    opacity: 1;
+    animation: typedBlink 0.7s infinite;
+}
+
+@keyframes typedBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Small Muted Description Paragraph */
+.cyan-short-pitch {
+    font-size: 1.35rem !important;
+    font-weight: 400 !important;
+    color: #a0aec0 !important; /* Premium Slate Gray tone */
+    line-height: 1.65 !important;
+    margin-bottom: 25px !important;
+}
+
+/* --------------------------------------------------------------------------
+   SOCIAL MEDIA ICONS ROW (CYAN RINGS)
+   -------------------------------------------------------------------------- */
+.cyan-social-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.cyan-social-icon-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00f2fe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00f2fe !important;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover Effect: Ring fills up with color and icon turns dark */
+.cyan-social-icon-btn:hover {
+    background: #00f2fe;
+    color: #11141c !important; 
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+    transform: translateY(-3px); /* Chhota sa upward lift */
+}
+
+/* --------------------------------------------------------------------------
+   DUAL ACTION PILL BUTTONS (RESUME + CONTACT)
+   -------------------------------------------------------------------------- */
+.cyan-action-btn-group {
+    display: flex;
+    gap: 16px;
+}
+
+.action-btn-pill {
+    padding: 10px 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 30px; /* Makes them capsule shape */
+    text-decoration: none;
+    text-align: center;
+    min-width: 95px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Solid Neon Button for Resume */
+.btn-neon-solid {
+    background: #00f2fe;
+    color: #11141c !important;
+    border: 2px solid #00f2fe;
+    box-shadow: 0 4px 20px rgba(0, 242, 254, 0.35);
+}
+
+.btn-neon-solid:hover {
+    box-shadow: 0 6px 25px rgba(0, 242, 254, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Outline Transparent Button for Contact */
+.btn-neon-outline {
+    background: transparent;
+    color: #00f2fe !important;
+    border: 2px solid #00f2fe;
+}
+
+.btn-neon-outline:hover {
+    background: rgba(0, 242, 254, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsive Handling for Mobile Screens */
+@media (max-width: 768px) {
+    .cyan-greeting-title { font-size: 3.2rem !important; }
+    .cyan-role-sub { font-size: 1.9rem !important; }
+    .action-btn-pill { padding: 8px 22px; }
+}
+
+/* ==========================================================================
+   🌌 FULLY RESPONSIVE SMOOTH PARTICLES ENGINE FOR FOOTER BACKGROUND
+   ========================================================================== */
+
+#main-footer {
+    position: relative; /* Fixed point tracking */
+    overflow: hidden;   /* Container bound checks layout containment */
+    background: #0b0d13; 
+    z-index: 1;
+}
+
+.footer-bg-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+/* Individual dot specs */
+.dot-particle {
+    position: absolute;
+    bottom: -20px; /* Hamesha footer ke dynamic bottom base se suru hoga */
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+    /* Multi-screen physics logic layer scaling */
+    animation: moveUpwardResponsive 12s infinite linear;
+}
+
+/* 🧪 RE-OPTIMIZED DELAY MATRIX WITH BALANCED SPEEDS FOR ALL SCREENS */
+.dot-particle:nth-child(1) { left: 10%; width: 5px; height: 5px; animation-duration: 8s; animation-delay: 0s; }
+.dot-particle:nth-child(2) { left: 25%; width: 3px; height: 3px; animation-duration: 14s; animation-delay: 2s; opacity: 0.4; }
+.dot-particle:nth-child(3) { left: 40%; width: 6px; height: 6px; animation-duration: 10s; animation-delay: 4s; }
+.dot-particle:nth-child(4) { left: 55%; width: 4px; height: 4px; animation-duration: 12s; animation-delay: 1s; }
+.dot-particle:nth-child(5) { left: 70%; width: 7px; height: 7px; animation-duration: 9s; animation-delay: 5s; box-shadow: 0 0 12px 3px rgba(255, 255, 255, 0.5); }
+.dot-particle:nth-child(6) { left: 85%; width: 3px; height: 3px; animation-duration: 16s; animation-delay: 3s; opacity: 0.5; }
+.dot-particle:nth-child(7) { left: 15%; width: 5px; height: 5px; animation-duration: 11s; animation-delay: 7s; }
+.dot-particle:nth-child(8) { left: 90%; width: 4px; height: 4px; animation-duration: 13s; animation-delay: 2s; }
+
+/* 🎬 100% RESPONSIVE PERCENTAGE TRANSLATION KEYFRAMES */
+@keyframes moveUpwardResponsive {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1; /* Smooth appearance right at the dynamic bottom clip */
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        /* FIXED: Using percentages forces travel up the entire footer height on all viewports */
+        transform: translateY(-105vh) scale(0.5); 
+        opacity: 0; /* Clear boundary exit vanish point */
+    }
+}
+/* ==========================================================================
+   🚀 SCALED-UP MULTI-LINE HERO TYPOGRAPHY ENGINE
+   ========================================================================== */
+
+.hero-text-content-cyan {
+    text-align: left;
+    max-width: 650px; /* Increased canvas boundary width for full name alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins', 'Montserrat', sans-serif !important;
+}
+
+/* Base properties for scaled up line layout headings */
+.cyan-greeting-title {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.15 !important; /* Tighter line layout tracking */
+    text-transform: none !important;
+    margin: 0 !important;
+}
+
+/* "Hi," Custom micro positioning sizes */
+.main-hi-line {
+    font-size: 4.8rem !important; /* Noticeably scaled up for premium aesthetic contrast */
+    margin-bottom: 5px !important;
+}
+
+/* "It's Priyanshu Nautiyal" line scaling */
+.name-line {
+    font-size: 4.2rem !important; /* Bold dominant desktop scale size */
+    margin-bottom: 18px !important;
+    letter-spacing: -0.04rem !important;
+}
+
+/* Accurate Amelia style cyan accent hue */
+.cyan-neon-text {
+    color: #00f2fe !important;
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.2); /* Discrete premium back text glow aura */
+}
+
+/* Subheading typing target grid */
+.cyan-role-sub {
+    font-size: 2.6rem !important; /* Sightly bigger to complement the huge headings */
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin-bottom: 25px !important;
+    text-transform: none !important;
+}
+
+#typed-skills-engine {
+    color: #00f2fe !important;
+}
+
+.typed-cursor {
+    color: #00f2fe !important;
+    font-size: 2.6rem;
+}
+
+/* Paragraph styling */
+.cyan-short-pitch {
+    font-size: 1.4rem !important; /* Clear sharp text layer sizing */
+    font-weight: 400 !important;
+    color: #a0aec0 !important;
+    line-height: 1.7 !important;
+    margin-bottom: 30px !important;
+}
+
+/* ==========================================================================
+   📱 MOBILE OVERRIDES FOR GIANT RESPONSIVE TYPOGRAPHY
+   ========================================================================== */
+@media (max-width: 768px) {
+    .main-hi-line { font-size: 3.8rem !important; }
+    .name-line { font-size: 3.2rem !important; }
+    .cyan-role-sub { font-size: 2rem !important; }
+    .typed-cursor { font-size: 2rem; }
+}
+
+/* ==========================================================================
+   🚨 ABSOLUTE VISIBILITY ENGINE: NO HIDING, NO ANIMATION FAILS
+   ========================================================================== */
+
+#premium-education-section {
+    position: relative;
+    width: 100%;
+    background: transparent !important; /* Blends natively into your dark site background */
+    padding: 60px 0 100px 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.edu-timeline-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 🎯 EXACT HEADING TRACK MATCHED WITH YOUR "PROBLEM SOLVING" SECTION */
+.edu-main-title-block {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.edu-main-title-block h2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 4.2rem !important;
+    font-weight: 300 !important; /* Thin styling for "MY" */
+    color: #ffffff !important; 
+    letter-spacing: 0.3rem !important;
+    text-transform: uppercase !important;
+    display: inline-block;
+    margin: 0;
+}
+
+.edu-main-title-block .orange-heavy-text {
+    font-weight: 400 !important; /* Bold styling for "EDUCATION" */
+    color: #ff5722 !important; 
+    margin-left: 14px !important;
+}
+
+/* MASTER DARK CONTAINER BOX PANEL (Mirrors Coding Analytics layout exactly) */
+.education-dark-master-panel {
+    background-color: #11141c !important; /* Premium dark background */
+    border-radius: 20px !important;
+    padding: 60px 40px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25) !important;
+    position: relative;
+    width: 100%;
+}
+
+.edu-central-line-track {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Center Static Guide Track Line */
+.edu-central-line-track::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05) !important;
+    transform: translateX(-50%);
+}
+
+/* Beautiful Solid Linear Gradient Center Line (No hidden states, always visible) */
+.edu-animated-progress-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff5722 0%, #00f2fe 80%, transparent 100%) !important;
+    transform: translateX(-50%) !important;
+    z-index: 2;
+}
+
+/* 🔓 TIMELINE ROWS: Forcefully locked to 100% full opacity and visible space */
+.timeline-container-row {
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
+    opacity: 1 !important; /* LOCKED VISIBLE: Browser stands no choice but to render this */
+    transform: none !important; /* Removed any complex translation shifts */
+}
+.timeline-container-row:last-child { margin-bottom: 0; }
+
+.left-row { left: 0; padding-right: 55px; text-align: right; }
+.right-row { left: 50%; padding-left: 55px; text-align: left; }
+
+/* Centered node circle rings mapping */
+.center-timeline-node { position: absolute; top: 32px; z-index: 5; }
+.left-row .center-timeline-node { right: -10px; }
+.right-row .center-timeline-node { left: -10px; }
+
+.concentric-glow-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #11141c !important;
+    border: 2px solid #ff5722;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(255, 87, 34, 0.5);
+}
+
+.inner-cyan-core {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #00f2fe;
+}
+
+/* 💎 FIXED TRANSLUCENT PREMIUM GLASSMORPHIC CARDS */
+.glassmorphic-edu-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glassmorphic-edu-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(255, 87, 34, 0.35) !important;
+    box-shadow: 0 15px 35px -10px rgba(255, 87, 34, 0.2) !important;
+}
+
+.card-responsive-header { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+.time-stamp-pill {
+    align-self: flex-start;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #a0aec0 !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 3px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* LARGE MASSIVE QUALIFICATION TEXT FIELDS */
+.header-text-meta h3 { 
+    font-size: 1.8rem !important; 
+    font-weight: 700 !important; 
+    color: #ffffff !important; 
+    margin: 8px 0 0 0 !important; 
+}
+.glassmorphic-edu-card:hover h3 { color: #00f2fe !important; }
+
+.institution-name { font-size: 1.2rem !important; color: #94a3b8 !important; margin: 4px 0 0 0 !important; }
+.status-badge-wrapper { margin-top: 6px; }
+
+.status-pill-pursuing {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #00f2fe !important;
+    text-transform: uppercase;
+    background: rgba(0, 242, 254, 0.08) !important;
+    border: 1px solid rgba(0, 242, 254, 0.15) !important;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.score-pill-orange {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ff5722 !important;
+    background: rgba(255, 87, 34, 0.08) !important;
+    border: 1px solid rgba(255, 87, 34, 0.15) !important;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.edu-card-description {
+    font-size: 1.05rem !important; 
+    color: #cbd5e1 !important;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.hover-bottom-gradient-line {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ff5722, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.glassmorphic-edu-card:hover .hover-bottom-gradient-line { opacity: 1; }
+
+/* Mobile Viewports safety layout reset overrides */
+@media (max-width: 768px) {
+    .education-dark-master-panel { padding: 40px 20px; }
+    .edu-central-line-track::before, .edu-animated-progress-line { left: 12px; transform: none; }
+    
+    .timeline-container-row { width: 100% !important; left: 0 !important; padding-left: 30px !important; padding-right: 0 !important; }
+    .left-row .center-timeline-node, .right-row .center-timeline-node { left: 3px !important; right: auto !important; }
+    .edu-main-title-block h2 { font-size: 2.4rem !important; }
+}
+/* ==========================================================================
+   🤍 ACHIEVEMENTS CRITICAL VISIBILITY OVERWRITE (NO JS BLANK PAGE BUG)
+   ========================================================================== */
+
+.achievements-section {
+    padding: 100px 8%;
+    background: #ffffff !important; /* Perfect standalone white background sheets */
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 100%;
+}
+
+.achievement-heading {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.achievement-heading h1 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 3.4rem !important;
+    font-weight: 300 !important;
+    color: #11141c !important;
+    letter-spacing: 6px !important;
+    text-transform: uppercase;
+    margin: 0 !important;
+}
+
+.achievement-heading span {
+    font-weight: 600 !important;
+    color: #ff5722 !important; /* Premium uniform copper orange */
+}
+
+.achievement-heading p {
+    font-size: 1rem !important;
+    margin-top: 15px !important;
+    letter-spacing: 4px !important;
+    color: #64748b !important;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* 🎯 Fluid Grid System Builder */
+.achievement-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+}
+
+/* 💎 LOCKED VISIBLE COMPONENT CARDS */
+.achievement-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+    
+    /* 🚨 THE CRITICAL BUG FIXES: Forced 100% visibility bypasses any JS observer failure */
+    opacity: 1 !important; 
+    transform: none !important; 
+    transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .4s ease, border-color .4s ease !important;
+}
+
+/* Stable Interactive Hover States */
+.achievement-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06) !important;
+    border-color: rgba(255, 87, 34, 0.25) !important;
+}
+
+.achievement-card img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: contain !important;
+    padding: 24px !important;
+    background: #fafafa !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03) !important;
+    transition: transform .4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.achievement-card:hover img {
+    transform: scale(1.04) !important;
+}
+
+.achievement-content {
+    padding: 24px !important;
+    text-align: left !important;
+}
+
+.achievement-content h3 {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    margin: 0 0 6px 0 !important;
+}
+
+.achievement-content span {
+    display: block !important;
+    font-size: 0.85rem !important;
+    color: #64748b !important;
+    margin-bottom: 16px !important;
+    font-weight: 500 !important;
+}
+
+.achievement-content a {
+    display: inline-block !important;
+    text-decoration: none !important;
+    color: #ff5722 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+.achievement-content a:hover {
+    color: #00f2fe !important; /* Cyber cyan hover */
+    transform: translateX(3px) !important;
+}
+
+/* Responsive viewports adjustments code safeguards */
+@media(max-width:768px){
+    .achievements-section { padding: 60px 4%; }
+    .achievement-heading h1 { font-size: 2.4rem !important; letter-spacing: 4px !important; }
+    .achievement-heading p { font-size: 0.85rem !important; letter-spacing: 2px !important; }
+    .achievement-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important; gap: 20px !important; }
+}

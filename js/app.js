@@ -98,3 +98,25 @@ if (contactForm) {
             });
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.achievement-card');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                // Ek baar render hone ke baad observer disconnect ho jayega for faster performance
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, {
+        threshold: 0.15 // Triggers faster right as card enters lower screen viewport bounds
+    });
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});
+

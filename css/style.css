@@ -1786,15 +1786,21 @@ img{
 }
 
 /* ==========================================================================
-   🚨 ABSOLUTE VISIBILITY ENGINE: NO HIDING, NO ANIMATION FAILS
+   🎓 PREMIUM EDUCATION TIMELINE ENGINE (COMPLETE CLEAN VISIBILITY FIX)
    ========================================================================== */
 
 #premium-education-section {
     position: relative;
     width: 100%;
-    background: transparent !important; /* Blends natively into your dark site background */
-    padding: 60px 0 100px 0;
-    overflow: hidden;
+    background: #ffffff !important; /* Perfect solid white canvas background */
+    
+    /* 🚨 VERTICAL ARTIFACT BUG FIX: Removes the horizontal pixel overlap underneath the dark panel shadow */
+    margin-top: 0 !important;
+    padding: 80px 8% 120px 8% !important; 
+    border-top: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    
     font-family: 'Poppins', sans-serif;
 }
 
@@ -1804,35 +1810,43 @@ img{
     padding: 0 20px;
 }
 
-/* 🎯 EXACT HEADING TRACK MATCHED WITH YOUR "PROBLEM SOLVING" SECTION */
+/* 🎯 EXACT HEADING TRACK SYNCED WITH "PROBLEM SOLVING" (5REM SPLIT LOOK) */
 .edu-main-title-block {
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 0 !important;
+    margin-bottom: 90px; /* Synchronized spacing layout gap */
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
 }
 
 .edu-main-title-block h2 {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 4.2rem !important;
-    font-weight: 300 !important; /* Thin styling for "MY" */
-    color: #ffffff !important; 
-    letter-spacing: 0.3rem !important;
+    font-size: 5rem !important; /* Exact 5rem big tracking layout size */
+    font-weight: 300 !important; /* Elegant thin styling for 'EDUCA' segment */
+    color: #11141c !important; /* Sharp dark light-theme baseline tone */
+    letter-spacing: 4px !important;
     text-transform: uppercase !important;
     display: inline-block;
     margin: 0;
+    padding: 0 !important;
+    border: none !important;
 }
 
+/* Scoped bold orange segment for the word tail 'TION' */
 .edu-main-title-block .orange-heavy-text {
-    font-weight: 400 !important; /* Bold styling for "EDUCATION" */
-    color: #ff5722 !important; 
-    margin-left: 14px !important;
+    font-weight: 400 !important; /* Solid bold tracking like 'SOLVING' */
+    color: #ff5c00 !important; /* Uniform theme orange */
+    margin-left: 0 !important; /* Merges seamlessly into a single word */
 }
 
-/* MASTER DARK CONTAINER BOX PANEL (Mirrors Coding Analytics layout exactly) */
+/* MASTER CONTAINER BOX PANEL (Maintains internal timeline matrix dark layout) */
 .education-dark-master-panel {
     background-color: #11141c !important; /* Premium dark background */
     border-radius: 20px !important;
     padding: 60px 40px;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15) !important;
     position: relative;
     width: 100%;
 }
@@ -1855,25 +1869,25 @@ img{
     transform: translateX(-50%);
 }
 
-/* Beautiful Solid Linear Gradient Center Line (No hidden states, always visible) */
+/* Beautiful Solid Linear Gradient Center Line */
 .edu-animated-progress-line {
     position: absolute;
     left: 50%;
     top: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(to bottom, #ff5722 0%, #00f2fe 80%, transparent 100%) !important;
+    background: linear-gradient(to bottom, #ff5c00 0%, #00f2fe 80%, transparent 100%) !important;
     transform: translateX(-50%) !important;
     z-index: 2;
 }
 
-/* 🔓 TIMELINE ROWS: Forcefully locked to 100% full opacity and visible space */
+/* TIMELINE CONTAINER ROWS (Forced Full Opacity) */
 .timeline-container-row {
     position: relative;
     width: 50%;
     margin-bottom: 40px;
-    opacity: 1 !important; /* LOCKED VISIBLE: Browser stands no choice but to render this */
-    transform: none !important; /* Removed any complex translation shifts */
+    opacity: 1 !important; 
+    transform: none !important; 
 }
 .timeline-container-row:last-child { margin-bottom: 0; }
 
@@ -1890,11 +1904,11 @@ img{
     height: 18px;
     border-radius: 50%;
     background: #11141c !important;
-    border: 2px solid #ff5722;
+    border: 2px solid #ff5c00;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 12px rgba(255, 87, 34, 0.5);
+    box-shadow: 0 0 12px rgba(255, 92, 0, 0.5);
 }
 
 .inner-cyan-core {
@@ -1904,7 +1918,7 @@ img{
     background-color: #00f2fe;
 }
 
-/* 💎 FIXED TRANSLUCENT PREMIUM GLASSMORPHIC CARDS */
+/* TRANSLUCENT PREMIUM GLASSMORPHIC CARDS */
 .glassmorphic-edu-card {
     position: relative;
     background: rgba(255, 255, 255, 0.02) !important;
@@ -1917,8 +1931,8 @@ img{
 
 .glassmorphic-edu-card:hover {
     transform: translateY(-5px) !important;
-    border-color: rgba(255, 87, 34, 0.35) !important;
-    box-shadow: 0 15px 35px -10px rgba(255, 87, 34, 0.2) !important;
+    border-color: rgba(255, 92, 0, 0.35) !important;
+    box-shadow: 0 15px 35px -10px rgba(255, 92, 0, 0.2) !important;
 }
 
 .card-responsive-header { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
@@ -1961,9 +1975,9 @@ img{
 .score-pill-orange {
     font-size: 0.85rem;
     font-weight: 700;
-    color: #ff5722 !important;
-    background: rgba(255, 87, 34, 0.08) !important;
-    border: 1px solid rgba(255, 87, 34, 0.15) !important;
+    color: #ff5c00 !important;
+    background: rgba(255, 92, 0, 0.08) !important;
+    border: 1px solid rgba(255, 92, 0, 0.15) !important;
     padding: 4px 12px;
     border-radius: 6px;
 }
@@ -1983,20 +1997,20 @@ img{
     left: 30px;
     right: 30px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #ff5722, transparent);
+    background: linear-gradient(90deg, transparent, #ff5c00, transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 .glassmorphic-edu-card:hover .hover-bottom-gradient-line { opacity: 1; }
 
-/* Mobile Viewports safety layout reset overrides */
+/* Mobile Viewports Fluid Text Rules Mapping */
 @media (max-width: 768px) {
+    #premium-education-section { padding: 60px 4% !important; }
     .education-dark-master-panel { padding: 40px 20px; }
     .edu-central-line-track::before, .edu-animated-progress-line { left: 12px; transform: none; }
-    
     .timeline-container-row { width: 100% !important; left: 0 !important; padding-left: 30px !important; padding-right: 0 !important; }
     .left-row .center-timeline-node, .right-row .center-timeline-node { left: 3px !important; right: auto !important; }
-    .edu-main-title-block h2 { font-size: 2.4rem !important; }
+    .edu-main-title-block h2 { font-size: rem !important; letter-spacing: 2px !important; }
 }
 /* ==========================================================================
    🤍 ACHIEVEMENTS CRITICAL VISIBILITY OVERWRITE (NO JS BLANK PAGE BUG)
@@ -2017,7 +2031,7 @@ img{
 
 .achievement-heading h1 {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 3.4rem !important;
+    font-size: 4.2rem !important;
     font-weight: 300 !important;
     color: #11141c !important;
     letter-spacing: 6px !important;
@@ -2026,7 +2040,7 @@ img{
 }
 
 .achievement-heading span {
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     color: #ff5722 !important; /* Premium uniform copper orange */
 }
 
@@ -2119,7 +2133,49 @@ img{
 /* Responsive viewports adjustments code safeguards */
 @media(max-width:768px){
     .achievements-section { padding: 60px 4%; }
-    .achievement-heading h1 { font-size: 2.4rem !important; letter-spacing: 4px !important; }
+    .achievement-heading h1 { font-size: 4.2rem !important; letter-spacing: 4px !important; }
     .achievement-heading p { font-size: 0.85rem !important; letter-spacing: 2px !important; }
     .achievement-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important; gap: 20px !important; }
+}
+/* ==========================================================================
+   🚀 FLOATING SCROLL TO TOP BUTTON (100% PURE CSS - NO JS REQUIRED)
+   ========================================================================== */
+
+#scrollToTopBtn {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    z-index: 9999 !important; /* Taaki har ek section ke upar dikhe */
+    border: none !important;
+    outline: none !important;
+    background-color: #ff5c00 !important; /* Tera core orange theme color */
+    color: #ffffff !important;
+    cursor: pointer !important;
+    
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 15px rgba(255, 92, 0, 0.4) !important;
+    
+    /* 🚨 ABSOLUTE VISIBILITY ENGINE: Kisi JS class trigger ki koi zaroorat nahi hai */
+    opacity: 1 !important;
+    visibility: visible !important;
+    
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease !important;
+}
+
+/* Hover effect */
+#scrollToTopBtn:hover {
+    background-color: #11141c !important; /* Black theme shift on hover */
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+#scrollToTopBtn svg {
+    display: block !important;
+    pointer-events: none; /* Icon standard tracking fixed */
 }

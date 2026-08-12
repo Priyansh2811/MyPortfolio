@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing my work, projects, and skills 
 
 ## 🌐 Live Preview
 
-Deployed on Vercel (auto-deploy via GitHub)
+https://priyanshuspace.vercel.app/
 
 ---
 
@@ -22,7 +22,7 @@ Hello, I am **Priyanshu Nautiyal**, a Java Developer passionate about building s
 * CSS3
 * JavaScript
 * Responsive Design
-* Vercel (Deployment)
+* Vercel (For Deployment)
 
 ---
 

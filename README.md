@@ -4,12 +4,6 @@ A modern, responsive portfolio website showcasing my work, projects, and skills 
 
 ---
 
-## 🌐 Live Preview
-
-https://priyanshuspace.vercel.app/
-
----
-
 ## 🧑‍💻 About Me
 
 Hello, I am **Priyanshu Nautiyal**, a Java Developer passionate about building scalable and user-focused applications. This portfolio highlights my projects, skills, and development journey.
@@ -21,7 +15,6 @@ Hello, I am **Priyanshu Nautiyal**, a Java Developer passionate about building s
 * HTML5
 * CSS3
 * JavaScript
-* Responsive Design
 * Vercel (For Deployment)
 
 ---
@@ -29,23 +22,31 @@ Hello, I am **Priyanshu Nautiyal**, a Java Developer passionate about building s
 ## 📂 Project Structure
 
 ```
-MyPortfolio/
+Portfolio/
+├── api/
+│   └── chat.js          # Serverless function for AI chatbot backend
+│
 ├── assets/
-│   ├── img/
-│   ├── video/
-│   └── icons/
+│   ├── img/             # Images and project thumbnails
+│   └── video/           # Demo videos
 │
 ├── css/
-│   └── style.css
+│   ├── chatbot.css      # Styling for AI chatbot interface
+│   └── style.css        # Main portfolio styles
+│
+├── data/
+│   └── portfolio.json   # Dynamic portfolio data source
 │
 ├── js/
-│   └── app.js
+│   ├── app.js           # Main frontend logic
+│   └── chatbot.js       # AI chatbot frontend integration
 │
-├── index.html
-├── .gitignore
-└── README.md
+├── .gitignore           # Git ignore configuration
+├── index.html           # Main HTML entry point
+├── package.json         # Node.js dependencies & scripts
+├── package-lock.json    # Locked dependency tree
+└── README.md            # Repository documentation
 ```
-
 ---
 
 ## ✨ Features
@@ -59,15 +60,6 @@ MyPortfolio/
 
 ---
 
-## 📸 Sections Included
-
-* Hero Section
-* Skills
-* Projects
-* About
-* Contact
-
----
 
 ## ⚡ Getting Started
 
@@ -80,33 +72,43 @@ git clone https://github.com/Priyansh2811/MyPortfolio.git
 Open the project:
 
 ```
-cd portfolio-website
+cd Portfolio
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Set up Environment Variables:
+
+
+Create a .env.local file in the root directory:
+
+```
+Code snippet
+# Add your API key here:
+API_KEY=your_secret_api_key_here
+```
+
+Run the local development server:
+
+```
+npx vercel dev
 ```
 
 Run locally:
 
-* Open `index.html` in your browser
+Open your browser and navigate to ```http://localhost:3000```
+
+
 
 ---
 
 ## 🚀 Deployment
 
-This project is deployed using Vercel.
-
-Steps:
-
-1. Push code to GitHub
-2. Import project in Vercel
-3. Deploy
-
----
-
-## 📌 Future Improvements
-
-* Add backend integration
-* Improve animations
-* Add blog section
-* Dark/Light mode toggle
+Deployed on Vercel (https://priyanshuspace.vercel.app/)
 
 ---
 

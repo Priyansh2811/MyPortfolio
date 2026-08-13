@@ -120,3 +120,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/* =========================================================
+   DYNAMIC MOBILE VIEWPORT & ORIENTATION FIX
+   ========================================================= */
+
+(function () {
+  function fixMobileViewport() {
+    // Calculates exact pixel height of current visible screen viewport
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  // Run on initial load
+  fixMobileViewport();
+
+  // Recalculate on screen resize and landscape/portrait rotation
+  window.addEventListener('resize', fixMobileViewport);
+  window.addEventListener('orientationchange', function() {
+    setTimeout(fixMobileViewport, 100); // Small delay to let browser re-render frame
+  });
+})();

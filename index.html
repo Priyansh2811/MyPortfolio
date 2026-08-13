@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js" defer></script>
+    <!-- Updated viewport meta tag: prevents unintended scaling breaks on orientation change -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
     <title>Priyanshu Nautiyal - Portfolio</title>
+    <meta name="description" content="Portfolio of Priyanshu Nautiyal - B.Tech CSE (AI & ML) Student, Software Developer, and AI/ML Enthusiast.">
+
+    <!-- Performance Optimization: Preconnect external FontAwesome servers -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- External Icon & Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+
+    <!-- Deferred JavaScript File -->
+    <script src="js/app.js" defer></script>
 </head>
 <body>
 
@@ -69,7 +82,7 @@
 
             <!-- Capsule Double Pills -->
             <div class="cyan-action-btn-group">
-                <a href="https://drive.google.com/file/d/14yF77viHOoZNafb9uNK1pXvganoW07DE/view?usp=drive_link" target="_blank" class="action-btn-pill btn-neon-solid">
+                <a href="https://drive.google.com/file/d/1z08Z1IJIAojT2clAEB1ckpQ_DXsAMZP4/view?usp=drive_link" target="_blank" class="action-btn-pill btn-neon-solid">
                     <i class="far fa-file-pdf" style="margin-right: 6px;"></i> Resume
                 </a>
                 <a href="#contact-form-section" class="action-btn-pill btn-neon-outline">Contact</a>
@@ -490,7 +503,7 @@
         <div class="about container">
             <div class="col-left">
                 <div class="about-img">
-                    <img src="./assets/img/IMG_0344.JPEG" alt="Priyanshu Nautiyal" />
+                    <img src="./assets/img/IMG_1434.JPG.jpeg" alt="Priyanshu Nautiyal" />
                 </div>
             </div>
             <div class="col-right">
@@ -499,7 +512,7 @@
                 <p>Hey, I’m a software engineering enthusiast who enjoys turning ideas into real world applications and occasionally turning coffee into code. I’m passionate about Java, full-stack development and building projects that are not only functional but actually useful. Most of my time goes into learning new technologies, solving coding problems and debugging issues that somehow disappear when someone else looks at them.
 Whether it’s designing clean user interfaces, building APIs, or managing databases, I’m always excited to learn and improve.
 Currently focused on growing as a developer, building impactful projects and finding opportunities where I can contribute, learn and create meaningful software.</p>
-                <a href="https://drive.google.com/file/d/14yF77viHOoZNafb9uNK1pXvganoW07DE/view?usp=drive_link" class="cta" download>Resume</a>
+                <a href="https://drive.google.com/file/d/1z08Z1IJIAojT2clAEB1ckpQ_DXsAMZP4/view?usp=drive_link" class="cta" download>Resume</a>
             </div>
         </div>
     </section>
@@ -645,6 +658,219 @@ Currently focused on growing as a developer, building impactful projects and fin
             <p>Copyright &copy; 2026 Priyanshu Nautiyal. All Rights Reserved.</p>
         </div>
     </footer>
+
+  <!-- ================= AI PORTFOLIO CHATBOT ================= -->
+
+<!-- Floating AI notification -->
+<div
+    id="ai-chat-notification"
+    class="ai-chat-notification"
+>
+
+    <div class="ai-notification-dot"></div>
+
+    <div class="ai-notification-content">
+
+        <strong>
+            Hi! I'm Priyanshu's AI 👋
+        </strong>
+
+        <span>
+            Ask me anything about his portfolio.
+        </span>
+
+    </div>
+
+    <button
+        type="button"
+        class="ai-notification-close"
+        onclick="hideChatNotification(event)"
+        aria-label="Close notification"
+    >
+        ×
+    </button>
+
+</div>
+
+
+<!-- Floating chatbot button -->
+<button
+    id="ai-chat-button"
+    class="ai-chat-button"
+    onclick="openChatbot()"
+    aria-label="Open Priyanshu AI"
+>
+    <span class="ai-chat-icon">✦</span>
+</button>
+
+
+<!-- Chat window -->
+<div
+    id="ai-chat-window"
+    class="ai-chat-window"
+>
+
+    <!-- HEADER -->
+
+    <div class="ai-chat-header">
+
+        <div class="ai-chat-title">
+
+            <div class="ai-avatar">
+                <span>✦</span>
+            </div>
+
+            <div class="ai-title-text">
+
+                <strong>Priyanshu AI</strong>
+
+                <span>
+                    <i class="ai-online-dot"></i>
+                    Portfolio Assistant
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="ai-close-button"
+            onclick="closeChatbot()"
+            aria-label="Close chatbot"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- CHAT CONTENT -->
+
+    <div
+        id="ai-chat-messages"
+        class="ai-chat-messages"
+    >
+
+        <!-- ONE SINGLE WELCOME MESSAGE -->
+
+        <div class="ai-welcome">
+
+            <div class="ai-welcome-icon">
+                ✦
+            </div>
+
+            <div class="ai-welcome-title">
+                Hi! I'm Priyanshu's AI Assistant.
+            </div>
+
+            <div class="ai-welcome-text">
+                I can help you explore his projects,
+                technical skills, education,
+                certifications and professional background.
+            </div>
+
+
+            <!-- QUICK QUESTIONS -->
+
+            <div class="ai-section-label">
+                QUICK QUESTIONS
+            </div>
+
+
+ <div class="ai-suggestions">
+
+    <button
+        type="button"
+        onclick="sendQuickQuestion('Tell me about Priyanshu.')"
+    >
+        <span>👨‍💻</span>
+        <span>About Priyanshu</span>
+        <b>›</b>
+    </button>
+
+
+    <button
+        type="button"
+        onclick="sendQuickQuestion('What are Priyanshu technical skills?')"
+    >
+        <span>🛠️</span>
+        <span>Technical Skills</span>
+        <b>›</b>
+    </button>
+
+
+    <button
+        type="button"
+        onclick="sendQuickQuestion('Explain Priyanshu projects.')"
+    >
+        <span>🚀</span>
+        <span>Projects</span>
+        <b>›</b>
+    </button>
+
+
+    <button
+        type="button"
+        onclick="sendQuickQuestion('What certifications does Priyanshu have?')"
+    >
+        <span>🏆</span>
+        <span>Certifications</span>
+        <b>›</b>
+    </button>
+
+
+ <button
+    type="button"
+    onclick="sendQuickQuestion('Give me a concise recruiter-focused profile of Priyanshu. Cover his strongest technical skills, most relevant project experience, education, certifications, problem-solving background, areas for growth, and suitability for an entry-level software engineering or backend role. Keep it under 180 words and make it easy to scan.')"
+>
+    <span>👨‍💼</span>
+    <span>Recruiter View</span>
+    <b>›</b>
+</button>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INPUT -->
+
+    <div class="ai-chat-input-area">
+
+        <textarea
+            id="ai-chat-input"
+            placeholder="Ask me about Priyanshu..."
+            rows="1"
+            autocomplete="off"
+        ></textarea>
+
+
+        <button
+            onclick="submitAIMessage()"
+            class="ai-send-button"
+            aria-label="Send message"
+        >
+            ➤
+        </button>
+
+    </div>
+
+   
+
+</div>
+
+
+<!-- ================= END AI PORTFOLIO CHATBOT ================= -->
+
+<script src="js/chatbot.js"></script>
+
+
+
+
+
 </body>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
@@ -666,12 +892,7 @@ Currently focused on growing as a developer, building impactful projects and fin
             }
         });
     </script>
-<!-- 🚀 SCROLL TO TOP FLOATING BUTTON -->
-<a href="#" id="scrollToTopBtn" title="Go to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="19" x2="12" y2="5"></line>
-        <polyline points="5 12 12 5 19 12"></polyline>
-    </svg>
+
 </a>
 </body>
 </html>

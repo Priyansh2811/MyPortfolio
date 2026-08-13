@@ -1,0 +1,207 @@
+{
+  "identity": {
+    "name": "Priyanshu Nautiyal",
+    "role": "Computer Science Engineering student and software developer",
+    "profile_summary": "Priyanshu is a computer science engineering student interested in software development, backend engineering, full-stack development and practical AI-powered applications.",
+    "primary_focus": [
+      "Java development",
+      "Backend development",
+      "Full-stack development",
+      "Problem solving",
+      "Software engineering"
+    ]
+  },
+
+  "education": {
+    "degree": "Bachelor of Technology in Computer Science Engineering",
+    "institution": "IPEC Ghaziabad",
+    "university": "Dr. A.P.J. Abdul Kalam Technical University",
+    "cgpa": "7.8",
+    "class_12": {
+      "board": "CBSE",
+      "school": "Vanasthali Public School, Noida",
+      "score": "85%"
+    },
+    "class_10": {
+      "board": "CBSE",
+      "school": "Vanasthali Public School, Noida",
+      "score": "94%"
+    }
+  },
+
+  "technical_skills": {
+    "languages": [
+      "Java",
+      "Python",
+      "JavaScript",
+      "SQL",
+      "HTML",
+      "CSS"
+    ],
+    "backend": [
+      "Spring",
+      "Spring Boot",
+      "Flask",
+      "REST APIs",
+      "Node.js",
+      "Express.js"
+    ],
+    "databases": [
+      "MySQL",
+      "SQLite",
+      "MongoDB"
+
+    ],
+    "computer_science": [
+      "Data Structures and Algorithms",
+      "DBMS",
+      "System Design",
+      "Operating Systems",
+      "Computer Networks",
+      "Object-Oriented Programming"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "VS Code"
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "TurfBook",
+      "type": "Full-stack web application",
+      "description": "A turf management and booking platform designed to simplify turf discovery, booking and management.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "features": [
+        "Turf booking",
+        "User interaction",
+        "Database-driven application",
+        "Turf management",
+        "Booking workflow"
+      ],
+      "technical_focus": [
+        "Backend development",
+        "REST-style application architecture",
+        "Relational database integration",
+        "Frontend-backend communication"
+      ]
+    },
+
+    {
+      "name": "Fake News Detection",
+      "type": "Machine learning web application",
+      "description": "A machine learning application for classifying news as real or fake.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "scikit-learn",
+        "NLTK",
+        "Pandas"
+      ],
+      "technical_focus": [
+        "Machine learning",
+        "Natural language processing",
+        "Text classification",
+        "Flask web development"
+      ]
+    },
+
+    {
+      "name": "NeatLabs Packet Capture Analyzer",
+      "type": "Cybersecurity and network analysis project",
+      "description": "A network traffic analysis and packet capture project focused on inspecting and analyzing PCAP data.",
+      "technical_focus": [
+        "Network traffic analysis",
+        "Packet inspection",
+        "Cybersecurity",
+        "Digital forensics concepts"
+      ]
+    }
+  ],
+
+  "certifications_and_achievements": [
+    "AWS Cloud Foundations",
+    "AWS Generative AI Foundations",
+    "AICTE and Edunet Full Stack with AI Tools",
+    "HackerRank Java 5 Star",
+    "HackerRank SQL 4 Star",
+    "LeetCode 100 Days"
+  ],
+
+  "professional_profile": {
+    "interests": [
+      "Backend engineering",
+      "Java development",
+      "Full-stack development",
+      "AI-powered applications",
+      "Cybersecurity",
+      "Software engineering"
+    ],
+    "career_goal": "To grow as a software engineer by building practical, scalable and technically meaningful applications."
+  },
+
+  "links": {
+    "gmail": "mailto:priyanshu.nautiyal@gmail.com",
+    "portfolio": "https://priyanshuspace.vercel.app/",
+    "credly": "https://www.credly.com/users/priyanshu-nautiyal",
+    "codolio": "https://codolio.com/profile/Priyanshu_28"
+  },
+  "location": {
+    "locality": "Vaishali",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "hometown": " Uttarakhand"
+  },
+  "contact": {
+    "email": "priyanhunauti5@gmail.com"
+  },
+  "Hobby": {
+    "interests": [
+      "Problem solving",
+      "Competitive programming",
+      "Learning new technologies",
+      "Debugging and troubleshooting",
+      "Building practical applications"
+    ]
+  },
+  "extracurricular": {
+    "activities": [
+      "Participated in coding competitions and hackathons",
+      "Contributed to open-source projects",
+      "Engaged in online coding challenges and platforms"
+    ]
+  },
+  "personal_traits": {
+    "qualities": [
+      "Curious and eager to learn",
+      "Detail-oriented and analytical",
+      "Adaptable and open to new challenges",
+      "Collaborative team player",
+      "Strong problem-solving skills"
+    ]
+  },
+  "future_goals": {
+    "objectives": [
+      "To become a proficient software engineer with expertise in backend and full-stack development.",
+      "To contribute to impactful projects that solve real-world problems.",
+      "To continuously learn and stay updated with emerging technologies."
+    ]
+  },
+  "hobby_apart_from_tech_and_academics": {
+    "interests": [
+      "Reading blogs and articles",
+      "Exploring new places loves to travel",
+      "Participating in cultural events communities",
+      "playing badminton and cricket",
+      "Listening to music and podcasts"
+    ]
+  } 
+}

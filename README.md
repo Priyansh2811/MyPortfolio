@@ -1,6 +1,6 @@
 # 🚀 Priyanshu Nautiyal — Portfolio Website
 
-A modern, responsive portfolio website showcasing my work, projects, and skills as a Java Developer. Built with a focus on performance, clean UI, and real-world usability.
+A modern and responsive portfolio website showcasing my work, projects, and skills as a Java Developer. Built with a focus on performance, clean UI, and real-world usability.
 
 ---
 
